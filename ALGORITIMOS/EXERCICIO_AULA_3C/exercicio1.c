@@ -4,10 +4,10 @@ int main (int arg, char*args[]) {
 
 int n1, n2,dif;
 
-	printf("escreva um numero inteiro: ");
+	printf("Entre com um numero inteiro qualquer: ");
 	scanf("%d",&n1);
 	
-	printf("escreva outro numero inteiro: ");
+	printf("Entre com outro numero inteiro qualquer: ");
 	scanf("%d", &n2);
 	
 		if (n1 > n2) { 

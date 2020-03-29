@@ -5,13 +5,13 @@ int main (int arg, char*args[])
 {
 	float a,b,c,aux;
 	
-	printf("primeiro numero: ");
+	printf("Entre primeiro numero: ");
 	scanf("%f", &a);
 	
-	printf("segundo numero: ");
+	printf("Entre segundo numero: ");
 	scanf("%f", &b);
 	
-	printf("terceiro numero: ");
+	printf("Entre terceiro numero: ");
 	scanf("%f",&c);
 	
 	if (a > b) {

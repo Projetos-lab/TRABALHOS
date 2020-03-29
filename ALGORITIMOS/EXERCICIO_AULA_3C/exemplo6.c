@@ -7,13 +7,13 @@ int main ( int arg, char*args[])
 	
 	char sexo;
 	
-	printf("digite [m] para masculino ou [f] para feminino: ");
+	printf("digite [M] para masculino ou [F] para feminino: ");
 	fflush(stdin);
 	scanf("%c", &sexo);
 	
 	toupper(sexo);
 	
-	sexo = 'm' ? printf("\nmasculino") : printf("\nfeminino");
+	sexo = 'M' ? printf("\nmasculino") : printf("\nfeminino");
 	
 	system("pause >> null");
 	return 0;
