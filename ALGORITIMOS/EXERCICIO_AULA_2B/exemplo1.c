@@ -12,7 +12,7 @@ int main(int arg, char *args[])
     scanf("%d", &idade);
 
     printf("digite uma data no formato dd/mm/aaaa: \n");
-    scanf("%d %*c %d %*c %d %*c", &dia, &mes, &ano);
+    scanf("%d %*c %d %*c %d", &dia, &mes, &ano);
 
     printf("digite o valor do salario: \n");
     scanf("%f", &salario);
