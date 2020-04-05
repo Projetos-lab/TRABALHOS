@@ -20,9 +20,8 @@ int main()
         scanf("%d", &num);
         resultado = fatorial(num);
         soma += resultado;
-        printf("\nA soma dos fatoriais é: %d ", soma);
     }
-
+    printf("\nA soma dos fatoriais é: %d ", soma);
     return 0;
 }
 
