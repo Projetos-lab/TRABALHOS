@@ -1,32 +1,36 @@
 #include "pilhas.c"
-int calcula(int a,int b,int c);
+void percorrer_Horrores(stack *p);
+
 int main()
 {
-   
-    int x,y,z;
-    x=0;
-    y=1;
-    z=3;
 
-    calcula(y,x,z);
+    stack pilha;
+    clear(&pilha);
+    int x, y, z;
+    x = 12;
+    y = 55;
+    z = 105;
 
+    push(&pilha, x);
 
+    push(&pilha, y);
+
+    push(&pilha, z);
+
+    percorrer_Horrores(&pilha);
     return 0;
 }
 
-int  calcula(a,b,c){
-    int var1,var2,var3;
+void percorrer_Horrores(stack *p) //tranformando a percorrer em recursiva
+{
 
-    var1 = a;
-    var2 = b;
-    var3 = c;
+    if (p->topo == -1) // caso base
+    {
 
+        system("pause");
+    }
 
-printf("%i",var1);
-printf("%i",var2);
-printf("%i",var3);
+    printf("%i\n", pop(p));
 
-
-return 0;
-
+    percorrer_Horrores(p); //caso recursivo
 }

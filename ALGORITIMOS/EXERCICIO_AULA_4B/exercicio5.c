@@ -4,7 +4,7 @@
 
 /* RESOLVIDO DE FORMA RECURSIVA*/
 int fatorial(int fat);
-int somafatorial(int som);
+
 int main()
 {
     int i, resultado, num, soma;
@@ -39,7 +39,4 @@ int fatorial(int fat)
 void br()
 {
     printf("\n");
-}
-int somaFatorial(int som)
-{
 }
