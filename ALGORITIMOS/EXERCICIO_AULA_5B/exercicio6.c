@@ -8,11 +8,12 @@ int main(int argc, char const *argv[])
         vet1[i] = i;
         printf("%d -", i);
     }
-       printf("VETOR DESORDENADO\n");
+    printf("VETOR DESORDENADO\n");
+    srand(time(NULL));
     for (i = 0; i <= 20; i++)
     {
-        printf("%d -",rand() % 21);
+        printf("%d -", rand() % 21);
     }
- 
+
     return 0;
 }
