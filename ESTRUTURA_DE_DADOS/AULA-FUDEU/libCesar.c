@@ -1,0 +1,5 @@
+#include "arvores.c"
+#include "arvoresbinarias.c"
+#include "filas.c"
+#include "no.c"
+#include "pilhas.c"
