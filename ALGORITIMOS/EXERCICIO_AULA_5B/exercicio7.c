@@ -10,6 +10,7 @@ int main(int argc, char const *argv[])
     char opcao;
     int c, i;
     opcao = 'N';
+     char faculdade[]  = {"Anchieta"};
     c = 0;
     while (opcao != 'S')
     {
@@ -33,5 +34,8 @@ int main(int argc, char const *argv[])
     mediaProva =  somaNota / c;
 
     return 0;
+//mediaProva1 ? mediaProva1=  1 : mediaProva2=2 : mediaProva1= 3; 
+
+
 }
 //não foi soliciatado a impressao dos vetores

@@ -1,5 +1,3 @@
-#include <stdlib.h>
-#include <string.h>
 void inverte(char palavra[])
 {
   int i;

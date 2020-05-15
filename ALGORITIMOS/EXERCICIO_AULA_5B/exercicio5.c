@@ -18,7 +18,7 @@ int main(int argc, char const *argv[])
         printf("%d \t",vet2[i]);
     }
 
-    //somando...
+  
     for (i = 0; i < 10; i++)
     {
         soma[i] = vet1[i] + vet2[i];
