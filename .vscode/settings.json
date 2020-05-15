@@ -1,6 +1,9 @@
 {
     "files.associations": {
         "LIST_A_EXE_17.C": "c",
-        "LIST_C_EXE_9.C": "c"
-    }
+        "LIST_C_EXE_9.C": "c",
+        "EXER01.C": "c",
+        "limits": "cpp"
+    },
+    "python.pythonPath": "C:\\Python27\\python.exe"
 }
