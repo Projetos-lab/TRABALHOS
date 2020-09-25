@@ -1,65 +1,107 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-float operacao( float valor , float valor2 , int opc ) {
+float area, valor1, valor2 = 0.0;
 
-  float resultado;
-
-  switch ( opc ) {
-  case 1:
-    resultado = valor + valor2;
-  break;
-  case 2:
-    resultado = valor - valor2;
-  break;
-  case 3:
-    resultado = valor * valor2;
-  break;
-  case 4:
-    resultado = valor / valor2;
-  break;
-  default:
-    resultado = 777;
-  }
-
-  return resultado;
+float areaRetangulo(float base, float altura)
+{
+  return base * altura;
 }
+float areaQuadrado(float lado)
+{
+  return areaRetangulo(lado, lado);
+}
+float areaTriangulo(float base, float altura)
+{
+  return areaRetangulo(base, altura) / 2;
+}
+float areaCirculo(float raio)
+{
+  return areaQuadrado(raio) * 3.14;
+}
+float areaLosango(float diagonalMaior, float diagonalMenor)
+{
+  return areaRetangulo(diagonalMaior, diagonalMenor) / 2;
+}
+float areaTrapezio(float baseMaior, float baseMenor)
+{
+  return areaRetangulo(baseMaior, baseMenor);
+}
+int main(int argc, char *argv[])
+{
+  int opc = 0;
 
-void main(){
+  while (opc != 9)
+  {
+    printf("\n");
+    printf("..:: CALCULADORA DE AREAS ::.. \n");
+    printf("1. Quadrado  \n");
+    printf("2. Retangulo \n");
+    printf("3. Triangulo \n");
+    printf("4. Circulo   \n");
+    printf("5. Trapezio  \n");
+    printf("6. Losango   \n");
+    printf("9. Sair      \n");
+    printf("Digite a opcao desejada: \n");
 
-  int opc;
-  float valor, valor2;
+    scanf("%d", &opc);
 
-  printf("|===============|\n");
-  printf("|  Calculadora  |\n");
-  printf("|===============|\n");
-  printf("|Escolha uma opc|\n");
-  printf("|---------------|\n");
-  printf("| [1] Soma      |\n");
-  printf("| [2] Subtracao |\n");
-  printf("| [3] Multip.   |\n");
-  printf("| [4] Divisao   |\n");
-  printf("| [5] Sair      |\n");
-  printf("|===============|\n");
+    if (opc == 1)
+    {
+      printf("\ndigite o valor do lado:");
+      scanf("%f", &valor1);
+      printf("\ndigite outro valor:");
 
-  while ( 1 ) {
-
-    printf("| Opc: ");
-    scanf("%i", &opc);
-
-    if ( opc == 5 ) {
-      break;
-    } else {
-
-    printf("| 1°valor: ");
-    scanf("%f", &valor);
-    printf("| 2°valor: ");
-    scanf("%f", &valor2);
-
-    printf("Resultado: %.2f\n", operacao(valor, valor2, opc));
+      printf("\nA area do quadrado e: %3.2f \n", areaQuadrado(valor1));
     }
+    else if (opc == 2)
+    {
+      printf("\ndigite o valor da base:");
+      scanf("%f", &valor1);
+      printf("\ndigite a altura:");
+      scanf("%f", &valor2);
+
+      printf("\nA area do retangulo e: %3.2f \n", areaRetangulo(valor1, valor2));
+    }
+    else if (opc == 3)
+    {
+      printf("\ndigite o valor da base:");
+      scanf("%f", &valor1);
+      printf("\ndigite a altura:");
+      scanf("%f", &valor2);
+
+      printf("\nA area do triangulo e: %3.2f \n", areaTriangulo(valor1, valor2));
+    }
+    else if (opc == 4)
+    {
+      printf("\ndigite um valor:");
+      scanf("%f", &valor1);
+
+      printf("\nA area do circulo e: %3.2f \n", areaCirculo(valor1));
+    }
+    else if (opc == 5)
+    {
+      printf("\ndigite o valor da base maior:");
+      scanf("%f", &valor1);
+      printf("\ndigite o valor da base menor:");
+      scanf("%f", &valor2);
+
+      printf("\nA area do trapezio e: %3.2f \n", areaTrapezio(valor1, valor2));
+    }
+    else if (opc == 6)
+    {
+
+      printf("\ndigite o valor da diagonal maior:");
+      scanf("%f", &valor1);
+      printf("\ndigite o valor da diagonal menor:");
+      scanf("%f", &valor2);
+
+      printf("\nA area do Losango e: %3.2f \n", areaLosango(valor1, valor2));
+    }
+
+    system("PAUSE");
+    system("cls");
   }
 
-  getch();
   return 0;
 }

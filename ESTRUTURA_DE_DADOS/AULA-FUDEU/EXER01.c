@@ -33,13 +33,29 @@ void br()
 
 int cadastrar()
 {
-    int num;
+    int num, i;
     printf("Qual numero deseja inserir no arquivo? ");
     scanf("%i", &num);
 
-    FILE *arq = fopen("dados.txt", "a+");
-    fprintf(arq, "%i", num);
+    FILE *arq = fopen("dados10000.txt", "a+");
+    FILE *arq2 = fopen("dados1000.txt", "a+");
+    FILE *arq3 = fopen("dados100000.txt", "a+");
+
+    for (i = 0; i < 10000; i++)
+    {
+        fprintf(arq, "%i\n", rand() % 100000);
+    }
+    for (i = 0; i < 1000; i++)
+    {
+        fprintf(arq2, "%i\n", rand() % 100000);
+    }
+    for (i = 0; i < 100000; i++)
+    {
+        fprintf(arq3, "%i\n", rand() % 100000);
+    }
     fclose(arq);
+    fclose(arq2);
+    fclose(arq3);
 
     mensagem("\nCadastrado!");
 
@@ -113,21 +129,21 @@ nodetree *arborizar()
     maketree(arvore);
     FILE *ARQ;
 
-    int num,cont = 1;
+    int num, cont = 1;
     ARQ = fopen("dados.txt", "r");
     while (!feof(ARQ))
     {
         fscanf(ARQ, "%d\n", &num);
 
-         if (cont == 1)
-            {
-                arvore = maketree(num);
-                cont++;
-            }
-            else
-            {
-                insert_binary_tree(arvore, num);
-            }
+        if (cont == 1)
+        {
+            arvore = maketree(num);
+            cont++;
+        }
+        else
+        {
+            insert_binary_tree(arvore, num);
+        }
     }
 
     fclose(ARQ);
@@ -141,9 +157,13 @@ nodetree *arborizar()
 
 int limpar()
 {
-    FILE *arc;
-    arc = fopen("dados.txt", "w");
-    fclose(arc);
+    FILE *arq = fopen("dados10000.txt", "w");
+    FILE *arq2 = fopen("dados1000.txt", "w");
+    FILE *arq3 = fopen("dados100000.txt", "w");
+    
+    fclose(arq);
+    fclose(arq2);
+    fclose(arq3);
 
     mensagem("Sumiu tudo! Arquivo limpo!");
     return 0;
