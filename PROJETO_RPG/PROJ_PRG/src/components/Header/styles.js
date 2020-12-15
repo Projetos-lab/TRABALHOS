@@ -4,11 +4,9 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
 justify-content: flex-start;
 align-items: center;
-margin-bottom: 5px;
+margin-bottom: 5%;
 margin-top: 5%;
 
-border-color: #fff;
-border-width: 1px;
 padding: 5px;
 `;
 
@@ -54,7 +52,8 @@ align-items: center;
 
 `;
 export const Class = styled.Text`
-color: #fff;
+color: #0353a4;
 font-size: 15px;
 font-weight: bold;
 `;
+

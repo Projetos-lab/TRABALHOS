@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Image} from 'react-native';
+import {View, Image,Dimensions } from 'react-native';
 
 import {
   Container,
@@ -19,21 +19,20 @@ export default function Header() {
         <ContentHeader>
           <Image
             style={{
-              width: 90,
-              height: 90,
+              width: Dimensions.get('window').width/4.5,
+              height: Dimensions.get('window').height/8.5,
               borderRadius: 50,
               // padding: 10,
-              borderColor: '#fff',
-              borderWidth: 3,
+
             }}
             source={require('~/assets/header/mage.png')}
           />
           <ContentInfo>
             <Contentname>
-              <Name> SAVIO</Name>
+              <Name>Player</Name>
             </Contentname>
             <ContentClass>
-              <Class>BARDO - NECROMANTE</Class>
+              <Class>CLASSE - SUBCLASSE</Class>
             </ContentClass>
           </ContentInfo>
         </ContentHeader>
